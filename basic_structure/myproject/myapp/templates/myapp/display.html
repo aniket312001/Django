@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <!-- C:\Users\User\Desktop\django\basic_structure\myproject\myapp\static\myapp\style.css -->
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Here are Some User</h1>
+        <div>
+            <table border="1">
+                <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Marks</th>
+
+                </tr>
+                {% for i in obj %}
+                <tr>
+                    <td>{{i.name}}</td> 
+                    <td>{{i.age}}</td> 
+                    <td>{{i.marks}}</td> 
+                </tr>
+                {% endfor %}
+                
+            </table>
+        </div>
+    </div>
+</body>
+</html>
